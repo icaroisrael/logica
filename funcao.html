@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Document</title>
+</head>
+<body>
+<form action="">
+    <input type="text" id="c1">
+    <input type="text" id="c2">
+    <select name="" id="op">
+        <option value="1">MUltiplicação</option>
+        <option value="2">Divisão</option>
+        <option value="3">Soma</option>
+        <option value="4">Subtração</option>
+    </select>
+    <button onclick="msn()">Calcule</button>
+</form>
+
+
+
+    <script>
+        function soma(a, b, c){
+            switch(c){
+                case 1 : return a * b; break;
+                case 2 : return a / b; break;
+                case 3 : return a + b; break;
+                case 4 : return a - b; break;
+                default : return "1 - 4"
+            }           
+        }
+        function msn(){
+           let valor = document.getElementById('op').value;
+           let v1 = parseInt(document.getElementById('c1').value);
+           let v2 = parseInt(document.getElementById('c2').value);
+          if(valor == "1"){
+            alert(v1 * v2);
+          }
+          else if (valor == "2"){
+            alert(v1 / v2);
+          }
+          else if(valor == "3"){
+            alert(v1 + v2);
+          }
+          else{
+            alert(v1 - v2);
+          }
+        }
+        
+    </script>
+</body>
+</html>
